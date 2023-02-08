@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="script.js"></script>
+</head>
+<body>
+    <h2>Skyrim Mod list</h2>
+    <b>Open the link for the first mod and ensure you're logged in first!!</b>
+
+    <br />
+    Download manually:
+    <br />
+    <a href="https://www.nexusmods.com/skyrimspecialedition/mods/30980">Legacy of the Dragonborn</a>
+    <br />
+    <a href="https://www.nexusmods.com/skyrimspecialedition/mods/10917">Beyond Skyrim: Bruma</a>
+    <br />
+    Mod count: {{mod_count}}
+    <br />
+
+    <button onclick="OpenAll()">Open all from list</button>
+    <table>
+        <tr>
+            <th>Link</th>
+            <th>Version</th>
+            <th>Mod Name</th>
+        </tr>
+        @list_template{{<tr><td><a class="nexus-mod" href="{1}">Link</a></td><td>{2}</td><td>{0}</td></tr>}}
+    </table>
+    <h5>Non-Nexus mods:</h5>
+    <table>
+        <tr>
+            <th>File</th>
+            <th>Mod Name</th>
+        </tr>
+        @non_nexus_template{{<tr><td>{0}</td><td>{1}</td></tr>}}
+    </table>
+</body>
+</html>
